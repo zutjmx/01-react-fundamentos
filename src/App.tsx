@@ -1,8 +1,6 @@
-import { faker } from '@faker-js/faker';
-
-import { BasicTypes } from "./typescript"
-
-const tituloFaker = faker.finance.accountName();
+import { 
+  /* BasicTypes, */ 
+  ObjetosLiterales } from "./typescript"
 
 function App() {
 
@@ -10,10 +8,10 @@ function App() {
     <main>
       
       <h1>Introducción a TS - React</h1>
-      <h2>Título faker: {tituloFaker}</h2>
 
       {/* Componentes */}
-      <BasicTypes/>
+      {/* <BasicTypes/> */}
+      <ObjetosLiterales/>
 
     </main>
   )
