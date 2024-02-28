@@ -1,7 +1,9 @@
-import { 
+/* import { 
   FuncionesBasicas,
-  /* BasicTypes, */ 
-  /* ObjetosLiterales */ } from "./typescript"
+   BasicTypes,  
+  ObjetosLiterales } from "./typescript" */
+
+import { Contador } from "./components"
 
 function App() {
 
@@ -13,7 +15,8 @@ function App() {
       {/* Componentes */}
       {/* <BasicTypes/> */}
       {/* <ObjetosLiterales/> */}
-      <FuncionesBasicas/>
+      {/* <FuncionesBasicas/> */}
+      <Contador/>
 
     </main>
   )
