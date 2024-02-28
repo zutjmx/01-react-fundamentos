@@ -3,7 +3,7 @@
    BasicTypes,  
   ObjetosLiterales } from "./typescript" */
 
-import { Contador } from "./components"
+import { /* Contador, */ ContadorWithHook } from "./components"
 
 function App() {
 
@@ -16,7 +16,8 @@ function App() {
       {/* <BasicTypes/> */}
       {/* <ObjetosLiterales/> */}
       {/* <FuncionesBasicas/> */}
-      <Contador/>
+      {/* <Contador/> */}
+      <ContadorWithHook/>
 
     </main>
   )
