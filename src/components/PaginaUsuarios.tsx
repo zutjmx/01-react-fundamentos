@@ -1,8 +1,8 @@
 import axios from "axios";
-import { useEffect } from "react"
-import { ReqRespUserListResponse } from "../interfaces";
+import { useEffect, useState } from 'react';
+import type { ReqRespUserListResponse, Usuario } from "../interfaces";
 
-const cargaUsuarios = async () => {
+const cargaUsuarios = async (): Promise<Usuario[]> => {
     try {
         const {data} = await axios.get<ReqRespUserListResponse>('https://reqres.in/api/users');
         return data.data;
@@ -14,8 +14,10 @@ const cargaUsuarios = async () => {
 
 export const PaginaUsuarios = () => {
 
+    const [usuarios, setUsuarios] = useState<Usuario[]>([]);
+
     useEffect(() => {
-        cargaUsuarios().then(usuarios => console.log(usuarios));
+        cargaUsuarios().then(setUsuarios);
     },[]);
 
     return (
@@ -30,13 +32,26 @@ export const PaginaUsuarios = () => {
                     </tr>
                 </thead>
                 <tbody>
-                    <tr>
-                        <td>avatar</td>
-                        <td>nombre</td>
-                        <td>email</td>
-                    </tr>
+                    {usuarios.map(usuario => (
+                        <RenglonUsuario key={usuario.id} usuario={usuario}/>
+                    ))}
                 </tbody>
             </table>
         </>
+    )
+}
+
+interface Props {
+    usuario: Usuario;
+}
+
+export const RenglonUsuario = ({usuario}: Props) => {
+    const {avatar,first_name,last_name,email} = usuario;
+    return (
+        <tr>
+            <td><img style={{width: '50px'}} src={avatar} alt="Avatar del usuario" /></td>
+            <td>{first_name} {last_name}</td>
+            <td>{email}</td>
+        </tr>
     )
 }
