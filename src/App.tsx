@@ -3,7 +3,10 @@
    BasicTypes,  
   ObjetosLiterales } from "./typescript" */
 
-import { /* Contador, */ BotonReusable, ContadorWithHook } from "./components"
+import { /* Contador, */ 
+        /* BotonReusable, */ 
+        /* ContadorWithHook, */ 
+        PaginaLogin} from "./components"
 
 function App() {
 
@@ -17,8 +20,9 @@ function App() {
       {/* <ObjetosLiterales/> */}
       {/* <FuncionesBasicas/> */}
       {/* <Contador/> */}
-      <ContadorWithHook/>
-      <BotonReusable color="red"/>
+      {/* <ContadorWithHook/> */}
+      {/* <BotonReusable color="red"/> */}
+      <PaginaLogin/>
 
     </main>
   )
