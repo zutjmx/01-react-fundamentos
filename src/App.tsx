@@ -6,7 +6,9 @@
 import { /* Contador, */ 
         /* BotonReusable, */ 
         /* ContadorWithHook, */ 
-        PaginaLogin} from "./components"
+        /* PaginaLogin, */
+        PaginaUsuarios
+      } from "./components"
 
 function App() {
 
@@ -22,7 +24,8 @@ function App() {
       {/* <Contador/> */}
       {/* <ContadorWithHook/> */}
       {/* <BotonReusable color="red"/> */}
-      <PaginaLogin/>
+      {/* <PaginaLogin/> */}
+      <PaginaUsuarios/>
 
     </main>
   )
